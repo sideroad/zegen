@@ -13,7 +13,7 @@ export default function(app, History) {
       !item
     ) {
       res.status(400).json({
-        err: 'service, user are required'
+        err: 'service, item are required'
       });
       return;
     }

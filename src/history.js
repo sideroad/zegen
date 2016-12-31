@@ -58,7 +58,7 @@ export default function(app, History) {
       !user
     ) {
       res.status(400).json({
-        err: 'service, user, item are required'
+        err: 'service, user are required'
       });
       return;
     }

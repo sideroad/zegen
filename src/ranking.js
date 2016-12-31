@@ -13,10 +13,11 @@ export default function(app, History) {
     } = req.query;
 
     if (
-      !service
+      !service ||
+      !from
     ) {
       res.status(400).json({
-        err: 'service, user are required'
+        err: 'service, from are required'
       });
       return;
     }
@@ -57,7 +58,7 @@ export default function(app, History) {
       !service
     ) {
       res.status(400).json({
-        err: 'service, user are required'
+        err: 'service, item, from are required'
       });
       return;
     }
